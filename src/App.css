@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Roboto, sans-serif;
-  background-color: #f4f0fa;
+  background-color: #f4f4f4;
   color: #333;
 }
 
@@ -11,13 +11,15 @@ body {
   max-width: 430px;
   margin: 0 auto;
   min-height: 100vh;
-  background-color: #f4f0fa00;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(to bottom, #f4f0fa 0%, #ffffff 100%);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
-} 
+  border-radius: 12px;
+}
+
 
 .app {
   padding-bottom: 80px;
@@ -27,13 +29,13 @@ body {
 .navbar {
   background: linear-gradient(to right, #5b2baf, #7b2cbf);
   color: white;
-  padding: 15px 20px;
+  padding: 16px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 
 .h1 {
@@ -66,12 +68,12 @@ body {
 .wallet-section {
   margin: 16px;
   padding: 20px;
-  background: linear-gradient(135deg, #f5ecff, #e8d6ff);
+  background: linear-gradient(135deg, #f6ecff, #e3d3ff);
   border-radius: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 16px rgba(90, 63, 151, 0.15);
+  box-shadow: 0 4px 14px rgba(90, 63, 151, 0.15);
 }
 
 .wh2 {
@@ -96,7 +98,7 @@ body {
   border-radius: 25px;
   border: none;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 
 .button:hover {
@@ -109,7 +111,7 @@ body {
   padding: 16px;
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 1px 8px rgba(91, 43, 175, 0.08);
+  box-shadow: 0 2px 8px rgba(91, 43, 175, 0.08);
 }
 
 .wh3 {
@@ -130,17 +132,19 @@ body {
 .action {
   transition: transform 0.2s ease;
   cursor: pointer;
-  padding: 10px;
+  padding: 12px;
   border-radius: 12px;
+  background: #faf7ff;
+  box-shadow: 0 1px 4px rgba(144, 101, 227, 0.1);
 }
 
 .action:hover {
+  background-color: #f1e9ff;
   transform: scale(1.05);
-  background-color: #f5f1fe;
 }
 
 .icon {
-  font-size: 30px;
+  font-size: 26px;
   margin-bottom: 6px;
 }
 
@@ -156,7 +160,7 @@ body {
   padding: 16px;
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 1px 8px rgba(91, 43, 175, 0.08);
+  box-shadow: 0 2px 8px rgba(91, 43, 175, 0.08);
 }
 
 .ch3 {
@@ -178,16 +182,18 @@ body {
   transition: transform 0.2s ease;
   padding: 12px 0;
   border-radius: 10px;
+  background-color: #faf7ff;
+  box-shadow: 0 1px 4px rgba(144, 101, 227, 0.06);
 }
 
 .category:hover {
   transform: scale(1.05);
-  background-color: #f4f0fd;
+  background-color: #f0e7ff;
 }
 
-.ticon{
-  font-size: 28px;
-  margin-bottom: 4px;
+.ticon {
+  font-size: 26px;
+  margin-bottom: 5px;
 }
 
 .cp {
@@ -201,7 +207,7 @@ body {
   padding: 16px;
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 1px 8px rgba(91, 43, 175, 0.08);
+  box-shadow: 0 2px 8px rgba(91, 43, 175, 0.08);
 }
 
 .rh3 {
@@ -242,9 +248,8 @@ body {
 }
 
 /* ---------------- Bottom Nav ---------------- */
-
 .bottom-nav {
-  
+
   bottom: 0;
   left: 0;
   right: 0;
@@ -270,13 +275,17 @@ body {
 
 .nav-item:hover {
   color: #5b2baf;
-  transform: translateY(-4px);
+  transform: translateY(-3px);
+}
+
+.nav-item.active {
+  color: #5b2baf;
+  font-weight: 600;
 }
 
 .nav-item .icon {
   font-size: 20px;
   margin-bottom: 3px;
-  line-height: 1;
 }
 
 .nav-item .label {
@@ -285,13 +294,6 @@ body {
   margin: 0;
 }
 
-.nav-item.active {
-  color: #5b2baf;
-  font-weight: 600;
-}
-
 .nav-item.active .icon {
   transform: scale(1.2);
 }
-
-
